@@ -19,20 +19,19 @@ header {
   margin: 0;
   padding: 0;
   background: #504d4d;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   color: white;
   height: 550px;
+  width: 100%;
 }
 div.introduction {
-  position: absolute;
-  left: 456px;
-  top: 107px;
-  height: 230px;
+  height: 430px;
   width: 485px;
   font-size: 34px;
   line-height: 60px;
+  align-self: center;
+  justify-self: end;
 }
 div.introduction span:first-child {
   color: black;
@@ -40,16 +39,17 @@ div.introduction span:first-child {
 div.introduction span:nth-child(2) {
   color: red;
 }
+div.img-container {
+  align-self: center;
+  justify-self: start;
+}
 div.img-container img {
   height: 438px;
   width: 556px;
-  position: absolute;
-  top: 53px;
-  left: 1099px;
 }
 button.duel-color {
   position: relative;
-  bottom: 3rem;
+  bottom: 2rem;
   padding: 0.5rem 1.5rem;
   font-weight: 900;
   font-size: 1rem;
@@ -100,21 +100,16 @@ button.duel-color:hover::after {
 /* CSS FOR PLAYER-INFO SECTION */
 /* ****************************** */
 section.player-info {
-  margin: 0 2.8rem;
+  margin-top: 5rem;
 }
-
 div.players {
-  padding: 0px;
-  position: relative;
+  padding: 2rem;
   width: 1250px;
   height: 474px;
-  left: 250px;
-  top: 48px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  place-items: center;
-  margin-bottom: 60px;
+  justify-items: center;
+  margin: auto;
 }
 div.player {
   background-color: #ffffff;
@@ -190,14 +185,14 @@ section.previous-matches {
   height: 400px;
   width: 80%;
   margin: auto;
-  
+
   margin-top: 9rem;
 }
-h1.header-text{
-  text-align:center;
+h1.header-text {
+  text-align: center;
   font-size: 2.6rem;
 }
-div.main-container{
+div.main-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
@@ -205,15 +200,15 @@ div.main-container{
 div.img-text-box {
   height: 270px;
   width: 300px;
-  padding: .3em;
+  padding: 0.3em;
   background-color: #f2f2f2;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px 10px rgb(226 226 226 / 80%);
   overflow: hidden;
   border-radius: 10%;
 }
-div.img-text-box h1{
-  text-align: center
+div.img-text-box h1 {
+  text-align: center;
 }
 div.img-text-box:hover img {
   transition: transform 0.5s;
@@ -227,7 +222,32 @@ div.football-img-box {
 div.football-img-box img {
   width: 100%;
   height: 200px;
-  border-radius:10%;
+  border-radius: 10%;
+}
+
+/* ***************** */
+/** CHANCES SECTION **/
+/* ***************** */
+section.chances {
+  background: linear-gradient(#00000073, #00000073),
+    url("../images/bg-pic - Copy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+section.chances h1.header-text {
+  color: white;
+}
+div.chances-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.5rem;
+}
+div.single-boxes {
+  text-align: center;
+  color: white;
 }
 
 /* ********************* */
@@ -251,4 +271,31 @@ footer i {
   background: #dadada;
   border-radius: 100%;
   padding: 0.5rem;
+}
+
+/* ************************* */
+/*** MEDIA QUERY FOR IPAD ***/
+/* ************************ */
+@media only screen and (max-width: 770px) {
+  /* CSS FOR HEADER */
+  header {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 83rem;
+    height: initial;
+    place-items: center;
+    justify-items: center;
+    align-items: center;
+    /* width: 100%; */
+  }
+  div.introduction,
+  div.img-container {
+    margin: auto;
+  }
+
+  /* CSS FOR PLAYER-INFO SECTION */
+  div.players{
+  grid-template-columns: repeat(2, 1fr);
+  }
+
 }
