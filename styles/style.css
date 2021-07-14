@@ -65,6 +65,7 @@ button.duel-color {
 }
 button.duel-color:hover {
   color: white;
+  cursor: pointer;
 }
 button.duel-color::before {
   content: "";
@@ -163,6 +164,7 @@ button.z-out {
   overflow: hidden;
   background-color: #fffef6;
   box-shadow: 0px 0px 5px;
+  cursor: pointer;
 }
 button.z-out::before {
   content: "";
@@ -186,10 +188,9 @@ button.z-out:hover::before {
 /* CSS FOR PREVIOUS MATCHES SECTION */
 /* ************************************** */
 section.previous-matches {
-  height: 400px;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
   margin: auto;
-
   margin-top: 9rem;
 }
 h1.header-text {
@@ -216,6 +217,7 @@ div.img-text-box h1 {
 }
 div.img-text-box:hover img {
   transition: transform 0.5s;
+  cursor: pointer;
 
   transform: scale(1.1);
 }
@@ -258,10 +260,10 @@ div.single-boxes {
 /*** CSS FOR FOOTER ***/
 /* ********************* */
 div.contacts-and-copyright {
-  width: 100%;
+  width: 98%;
   text-align: center;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 16px;
+  padding: 9px;
 }
 .footer-img {
   margin: auto;
@@ -277,15 +279,6 @@ footer i {
   padding: 0.5rem;
 }
 
-/* ******************* */
-/**** MEDIA QUERIES ****/
-/* ****************** */
-@media (max-width: 2000px) and (min-width: 1325px) {
-  html {
-    overflow-x: hidden;
-  }
-}
-
 /* ************************* */
 /*** MEDIA QUERY FOR IPAD ***/
 /* ************************ */
@@ -296,7 +289,6 @@ footer i {
     grid-template-columns: repeat(1, 1fr);
     width: 83rem;
     height: initial;
-    /* width: 100%; */
   }
   div.introduction,
   div.img-container {
@@ -304,13 +296,21 @@ footer i {
   }
 
   /* CSS FOR PLAYER-INFO SECTION */
+  /* -------------------------- */
   div.players {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    margin-left: 200px;
+    margin-left: 255px;
   }
 
   /* CSS FOR HIGHLIGHTS SECTION */
+  /* -------------------------- */
+  section.highlights {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
   div.highlights-box {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
@@ -319,23 +319,30 @@ footer i {
   div.img-box {
     margin-top: 5rem;
   }
+  div.img-box img {
+    width: 100%;
+  }
 
   /* CSS FOR PREVIOUS MATCHES SECTION   */
+  /* -------------------------------------- */
   section.previous-matches {
     margin-left: 300px;
-    margin-top: 10rem;
+    margin-top: 0rem;
   }
   div.main-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
   /* CSS FOR CHANCES SECTION   */
+  /* -------------------------- */
   section.chances {
-    margin-top: 70rem;
-    margin-left: 0px;
-    min-width: 1350px;
+    margin: 0rem;
+    min-width: 1328px;
   }
+
   /* CSS FOR FOOTER   */
+  /* -------------------------- */
   footer {
     margin-left: 250px;
   }
@@ -344,29 +351,87 @@ footer i {
   }
 }
 
+
+
 /* ************************* */
 /*** MEDIA QUERY FOR MOBILE ***/
 /* ************************ */
 
-@media only screen and (max-width: 415px) {
-  /* CSS FOR PREVIOUS MATCHES SECTION   */
-  section.previous-matches {
-    margin-left: 400px;
-    margin-top: 10rem;
+@media only screen and (max-width: 450px) {
+
+  /* CSS FOR HEADER */
+  /* -------------- */
+  header {
+    width: 83.1rem;
   }
+
+  /*  CSS FOR PLAYER-INFO SECTION  */
+  /* ------------------------------------ */
+  section.player-info {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* CSS FOR HIGHLIGHTS SECTION */
+  /* -------------------------- */
+  section.highlights {
+    margin-top: 10rem;
+    margin-left: 200px;
+    width: 800px;
+  }
+  div.texts {
+    margin-left: 5rem;
+    text-align: center;
+  }
+  div.highlights-box {
+    margin-left: 150px;
+    width: 80%;
+  }
+  div.img-box {
+    width: 100%;
+  }
+
+  /* CSS FOR PREVIOUS MATCHES SECTION   */
+  /* ------------------------------------ */
+  section.previous-matches {
+    margin-left: 350px;
+    margin-top: 20rem;
+    /*     border: 1px solid black; */
+    width: 100vh;
+    height: 100vh;
+    margin-left: 300px;
+    margin-bottom: 0;
+  }
+  div.main-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+  }
+  div.img-text-box {
+    width: 60%;
+    height: 50vh;
+    padding: 1rem;
+  }
+  div.img-text-box h1 {
+    font-size: 2.4rem;
+  }
+
   /* CSS FOR CHANCES SECTION   */
+  /* -------------------------- */
   section.chances {
-    margin-top: 70rem;
+    margin-top: 80rem;
     min-width: 1330px;
   }
+
   /* CSS FOR FOOTER   */
+  /* -------------------------- */
   footer {
     margin-left: 350px;
+  }
+  .footer-img {
+    margin-left: 50px;
   }
   div.contacts-and-copyright {
     margin-left: 100px;
     width: 200px;
-    display: flex;
-    flex-direction: row;
+    margin-left: 200px;
   }
 }
