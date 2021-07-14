@@ -8,7 +8,10 @@ body {
   margin: 0;
   background-color: #ffffff;
 }
-
+section,
+footer {
+  margin-top: 10rem;
+}
 /* ****************** */
 /* CSS FOR HEADER */
 /* ****************** */
@@ -180,12 +183,56 @@ button.z-out:hover::before {
   transform: scale(1.27);
 }
 
+/* ************************************** */
+/* CSS FOR PREVIOUS MATCHES SECTION */
+/* ************************************** */
+section.previous-matches {
+  height: 400px;
+  width: 80%;
+  margin: auto;
+  
+  margin-top: 9rem;
+}
+h1.header-text{
+  text-align:center;
+  font-size: 2.6rem;
+}
+div.main-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+div.img-text-box {
+  height: 270px;
+  width: 300px;
+  padding: .3em;
+  background-color: #f2f2f2;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 10px rgb(226 226 226 / 80%);
+  overflow: hidden;
+  border-radius: 10%;
+}
+div.img-text-box h1{
+  text-align: center
+}
+div.img-text-box:hover img {
+  transition: transform 0.5s;
+
+  transform: scale(1.1);
+}
+
+div.football-img-box {
+  width: 100%;
+}
+div.football-img-box img {
+  width: 100%;
+  height: 200px;
+  border-radius:10%;
+}
+
 /* ********************* */
 /*** CSS FOR FOOTER ***/
 /* ********************* */
-footer {
-  margin-top: 10rem;
-}
 div.contacts-and-copyright {
   width: 100%;
   text-align: center;
@@ -200,86 +247,8 @@ div.contacts-and-copyright {
 .footer-img img {
   width: 400px;
 }
-footer i{
+footer i {
   background: #dadada;
-  border-radius:100%;
-  padding: .5rem;
+  border-radius: 100%;
+  padding: 0.5rem;
 }
-
-
-
-/*div.introduction {
-  text-align: center;
-  font-size: 35px;
-  line-height: 89px;
-}
-div.introduction span:first-child {
-  color: black;
-}
-div.introduction span:nth-child(2) {
-  color: red;
-}
-button.duel-color {
-  position: relative;
-  bottom: 3rem;
-  padding: 0.5rem 1.5rem;
-  font-weight: 900;
-  font-size: 1rem;
-  border: 0;
-  outline: 0;
-  margin-left: 10px;
-  z-index: 1;
-  overflow: hidden;
-}
-button.duel-color:hover {
-  color: white;
-}
-button.duel-color::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: -111%;
-  background: red;
-  transition: left 200ms;
-  transform: skew(25deg);
-  z-index: -1;
-  width: 100%;
-}
-button.duel-color:hover::before {
-  left: -50%;
-}
-button.duel-color::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 110%;
-  background: black;
-  transition: left 200ms;
-  transform: skew(25deg);
-  z-index: -1;
-  width: 100%;
-}
-button.duel-color:hover::after {
-  left: 49%;
-}
-.img-container {
-  max-width: 100%;
-  margin-right: 18rem;
-}
-.img-container img {
-  max-width: 500px;
-}
-
-@media only screen and (max-width: 1050px) {
-  header {
-    flex-direction: column;
-    height: 850px;
-  }
-  .img-container {
-    margin: auto;
-  }
-} */
