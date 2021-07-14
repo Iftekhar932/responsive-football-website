@@ -39,6 +39,9 @@ div.introduction span:first-child {
 div.introduction span:nth-child(2) {
   color: red;
 }
+div.introduction span:nth-child(2):hover {
+  color: black;
+}
 div.img-container {
   align-self: center;
   justify-self: start;
@@ -105,11 +108,12 @@ section.player-info {
 div.players {
   padding: 2rem;
   width: 1250px;
-  height: 474px;
+  /*   height: 474px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   margin: auto;
+  gap: 20px;
 }
 div.player {
   background-color: #ffffff;
@@ -283,9 +287,6 @@ footer i {
     grid-template-columns: repeat(1, 1fr);
     width: 83rem;
     height: initial;
-    place-items: center;
-    justify-items: center;
-    align-items: center;
     /* width: 100%; */
   }
   div.introduction,
@@ -294,8 +295,68 @@ footer i {
   }
 
   /* CSS FOR PLAYER-INFO SECTION */
-  div.players{
-  grid-template-columns: repeat(2, 1fr);
+  div.players {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-left: 200px;
   }
 
+  /* CSS FOR HIGHLIGHTS SECTION */
+div.highlights-box {
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  margin-left: 300px;
+}
+div.img-box{
+  margin-top: 5rem;
+}
+
+/* CSS FOR PREVIOUS MATCHES SECTION   */
+section.previous-matches{
+  margin-left: 300px;
+  margin-top: 10rem;
+}
+  div.main-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+/* CSS FOR CHANCES SECTION   */
+section.chances{
+  margin-top: 70rem;
+  margin-left: 250px;
+}
+/* CSS FOR FOOTER   */
+  footer{
+    margin-left: 250px;
+  }
+  div.contacts-and-copyright{
+    margin-left: 100px;
+  }
+}
+
+/* ************************* */
+/*** MEDIA QUERY FOR MOBILE ***/
+/* ************************ */
+
+@media only screen and (max-width:415px){
+  /* CSS FOR PREVIOUS MATCHES SECTION   */
+section.previous-matches{
+  margin-left: 400px;
+  margin-top: 10rem;
+}
+/* CSS FOR CHANCES SECTION   */
+section.chances{
+  margin-top: 70rem;
+  margin-left: 230px;
+  width: 750px;
+}
+/* CSS FOR FOOTER   */
+  footer{
+    margin-left: 350px;
+  }
+  div.contacts-and-copyright{
+    margin-left: 100px;
+    width: 200px;
+    display: flex:
+    flex-direction: row;
+  }
 }
