@@ -332,8 +332,8 @@ footer i {
   /* CSS FOR CHANCES SECTION   */
   section.chances {
     margin-top: 70rem;
-    margin-left: 250px;
-    min-width: 750px;
+    margin-left: 0px;
+    min-width: 1350px;
   }
   /* CSS FOR FOOTER   */
   footer {
@@ -357,8 +357,7 @@ footer i {
   /* CSS FOR CHANCES SECTION   */
   section.chances {
     margin-top: 70rem;
-    margin-left: 230px;
-    min-width: 750px;
+    min-width: 1330px;
   }
   /* CSS FOR FOOTER   */
   footer {
