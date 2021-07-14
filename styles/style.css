@@ -328,6 +328,7 @@ footer i {
   section.previous-matches {
     margin-left: 300px;
     margin-top: 0rem;
+    margin-bottom: 20rem;
   }
   div.main-container {
     grid-template-columns: repeat(2, 1fr);
