@@ -1,0 +1,169 @@
+/* Imported font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* COMMON CSS */
+/* -------------------- */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* ****************** */
+/* CSS FOR HEADER */
+/* ****************** */
+header {
+  margin: 0;
+  padding: 0;
+  background: #504d4d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 550px;
+}
+div.introduction {
+  position: absolute;
+  left: 456px;
+  top: 107px;
+  height: 230px;
+  width: 485px;
+  font-size: 34px;
+  line-height: 60px;
+}
+div.introduction span:first-child {
+  color: black;
+}
+div.introduction span:nth-child(2) {
+  color: red;
+}
+div.img-container img {
+  height: 438px;
+  width: 556px;
+  position: absolute;
+  top: 53px;
+  left: 1099px;
+}
+button.duel-color {
+  position: relative;
+  bottom: 3rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 900;
+  font-size: 1rem;
+  border: 0;
+  outline: 0;
+  margin-left: 10px;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #bdbcbc;
+}
+button.duel-color:hover {
+  color: white;
+}
+button.duel-color::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -111%;
+  background: red;
+  transition: left 200ms;
+  transform: skew(25deg);
+  z-index: -1;
+  width: 100%;
+}
+button.duel-color:hover::before {
+  left: -50%;
+}
+button.duel-color::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 110%;
+  background: black;
+  transition: left 200ms;
+  transform: skew(25deg);
+  z-index: -1;
+  width: 100%;
+}
+button.duel-color:hover::after {
+  left: 49%;
+}
+
+/*div.introduction {
+  text-align: center;
+  font-size: 35px;
+  line-height: 89px;
+}
+div.introduction span:first-child {
+  color: black;
+}
+div.introduction span:nth-child(2) {
+  color: red;
+}
+button.duel-color {
+  position: relative;
+  bottom: 3rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 900;
+  font-size: 1rem;
+  border: 0;
+  outline: 0;
+  margin-left: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+button.duel-color:hover {
+  color: white;
+}
+button.duel-color::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -111%;
+  background: red;
+  transition: left 200ms;
+  transform: skew(25deg);
+  z-index: -1;
+  width: 100%;
+}
+button.duel-color:hover::before {
+  left: -50%;
+}
+button.duel-color::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 110%;
+  background: black;
+  transition: left 200ms;
+  transform: skew(25deg);
+  z-index: -1;
+  width: 100%;
+}
+button.duel-color:hover::after {
+  left: 49%;
+}
+.img-container {
+  max-width: 100%;
+  margin-right: 18rem;
+}
+.img-container img {
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 1050px) {
+  header {
+    flex-direction: column;
+    height: 850px;
+  }
+  .img-container {
+    margin: auto;
+  }
+} */
