@@ -280,7 +280,7 @@ footer i {
 /* ******************* */
 /**** MEDIA QUERIES ****/
 /* ****************** */
-@media (max-width: 2000px) {
+@media (max-width: 2000px) and (min-width: 1325px) {
   html {
     overflow-x: hidden;
   }
